@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MY_ENV: "John Doe"
+      SUPER_SECRET: ${{ secrets.SUPER_SECRET }}
     steps:
       - name: Greet the User
         run: echo "Hello World!"
@@ -22,3 +23,4 @@ jobs:
         run: |
           echo "Hello $MY_ENV"
           echo "Hello $GITHUB_ACTOR"
+          echo "The secret is: $SUPER_SECRET"
