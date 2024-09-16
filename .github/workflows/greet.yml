@@ -14,3 +14,6 @@ jobs:
         with:
           text: "I love actions!"
           color: "red"
+      - run: ls -l
+      - uses: actions/checkout@v2
+      - run: ls -l
